@@ -1,9 +1,17 @@
 # -*- coding: utf-8 -*-
 import os
 
-from aigis.segment.utils import extract_output_annotations
+import pytest
+
+detectron2 = pytest.importorskip(
+    "detectron2",
+    reason="detectron2 not installed; skipping GPU integration tests",
+)
+
+from aigis.segment.utils import extract_output_annotations  # noqa: E402
 
 
+@pytest.mark.integration
 def test_output_dims():
     """Test extract_output_annotations function."""
     import cv2
