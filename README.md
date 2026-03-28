@@ -1,5 +1,8 @@
 <p align="center">
-    <h1 align="center">AIGIS</h1>
+    <h1 align="center"><img src="docs/content/aigis.png" alt="aigis logo" width=150px> <br> AIGIS</h1>
+	
+
+
 </p>
 <p align="center">
     <em>AI annotation, segmentation, and conversion tools for GIS imagery</em>
@@ -14,7 +17,7 @@
 	</p>
 <hr>
 
-![aigis](docs/content/aigis.png)
+![Greater Sydney Dataset](./docs/content/Greater_Sydney_Dataset.jpg)
 
 # aigis
 
@@ -55,8 +58,6 @@ pip install -e aigis
 
 ## Usage
 
-![Greater Sydney Dataset](https://github.com/Sydney-Informatics-Hub/aigis/assets/20785842/3df6b080-5a3f-4ae2-b949-52fb16c024b7)
-
 ### Recommended System Requirements
 
 All tools were built for Linux or MacOS systems.
@@ -70,10 +71,9 @@ Inference and postprocessing both benefit from CUDA GPUs.
 
 ## `aigis` datasets
 
-Explore our two featured example datasets using a [Felt map](https://felt.com/map/Sydney-Buildings-6drWs3o9ARViitVdt6qp60A?loc=-33.8282,150.8961,10.93z).
+Explore our two featured example datasets using a [PMTiles map](https://pmtiles.io/#url=https%3A%2F%2Fhuggingface.co%2Fdatasets%2FSIH%2FGreater-Sydney-Trees-Buildings%2Fresolve%2Fmain%2Fgreater-sydney-trees-buildings.pmtiles&map=13.44/-33.86252/151.20767) or [overlaid with NSW Sixmap aerial imagery](https://sydney-informatics-hub.github.io/aigis/map/#15.75/-33.889826/151.185079).
 
-![felt_map](https://github.com/Sydney-Informatics-Hub/aigis/assets/20785842/3b0647ed-4a74-4941-9e3f-50075644f597)
-To load the matching NSW SixMaps aerial photography you have to click 1. background layers, then select 2. NSW SixMaps, as in the image above.
+The datasets themselves are available on [Huggingface Datasets](https://huggingface.co/datasets/SIH/Greater-Sydney-Trees-Buildings)
 
 ### Building Segmentation
 
@@ -81,7 +81,7 @@ We've used the full `aigis` toolkit to fine tune segmentation models to detect a
 
 Our models's predictions are available as a shapefile in GeoParquet, with almost one million buildings.
 
-![Greater Sydney Buildings](docs/content/gsu_buildings.png)
+![Greater Sydney Buildings](./docs/content/gsu_buildings.png)
 
 ### Tree Segmentation
 
@@ -89,7 +89,7 @@ We've used the full `aigis` toolkit to fine tune segmentation models to detect a
 
 Our models's predictions are available as a shapefile in GeoParquet, with 2 million tree patches.
 
-![Greate Sydney Tree](docs/content/gsu_trees.png)
+![Greate Sydney Tree](./docs/content/gsu_trees.png)
 
 ##  Contributing
 
@@ -138,6 +138,7 @@ The project team includes:
 - Sahand Vahidnia
 - Xinwei Luo
 - Thomas Mauch
+- Gordon McDonald
 
 ##  License
 
