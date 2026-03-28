@@ -48,3 +48,24 @@ dask = "^2024.2.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+markers = [
+    "integration: tests requiring GPU, model weights, or network access",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:pyproj",
+    "ignore::FutureWarning:geopandas",
+]
+
+[tool.coverage.run]
+source = ["aigis"]
+omit = ["aigis/segment/eval.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]
